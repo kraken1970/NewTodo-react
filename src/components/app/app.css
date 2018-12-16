@@ -6,9 +6,18 @@
 
 .todo-app {
   margin: 2rem auto 0 auto;
-  max-width: 400px;
+  max-width: 80vw;
 }
 
 .top-panel {
   margin: 1rem 0;
+}
+
+@media only screen and (max-width: 380px) {
+  .top-panel {
+    flex-direction: column;
+  }
+  .search-panel input {
+    margin-bottom: 10px;
+  }
 }

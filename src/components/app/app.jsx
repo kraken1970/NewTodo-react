@@ -35,9 +35,7 @@ export default class App extends Component {
       const before = todoData.slice(0, idx);
       const after = todoData.slice(idx + 1);
       const newArray = [...before, ...after];
-      // const newArray = [...todoData];
-      // const idx = newArray.findIndex(el => el.id === id);
-      // newArray.splice(idx, 1);
+
       return {
         todoData: newArray
       };
@@ -120,7 +118,10 @@ export default class App extends Component {
       <div className="todo-app">
         <AppHeader toDo={todoCount} done={doneCount} />
         <div className="top-panel d-flex">
-          <SearchPanel onSearchChange={this.onSearchChange} />
+          <SearchPanel
+            onSearchChange={this.onSearchChange}
+            className="search-panel"
+          />
           <ItemStatusFilter
             filter={filter}
             onFilterChange={this.onFilterChange}
